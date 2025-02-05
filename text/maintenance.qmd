@@ -27,12 +27,15 @@ The wiper brush fell off on the following deployments:
 Pine Island:
 
 -   January 10 -- February 8, 2024 (Irma SN: 20H100465) central wiper SN: 23G100412
+-   October 1 -- November 6, 2024 (Flounder SN: 12L101354) central wiper SN: 12L101282
 
 San Sebastian:
 
 -   December 12 -- January 10, 2024 (Megalops SN: 16J102351) central wiper SN: 22A106852
 -   February 8 -- March 7, 2024 (Megalops SN: 16J102351) central wiper SN: 22A106852
 -   September 19 -- October 1, 2024 SS (Megalops SN:16J102351) central wiper SN: 22A106852
+-   October 1 -- November 4, 2024 (Dorian SN: 20H100466) central wiper SN: 13K100773)
+-   November 4 -- December 3, 2024 (Megalops SN: 16J102351) central wiper SN: 22A106852
 
 Fort Matanzas:
 
@@ -54,6 +57,8 @@ The following is a list of deployments that experienced broken data files and al
 -   SS (Flounder SN: 12L101354) 01/10/2024 12:15 -- 02/08/2024 10:15 
 -   FM (Marlin SN: 13E101372) 03/07/2024 09:30 -- 04/09/2024 10:15
 -   SS (Dorian SN: 20H100466) 05/19/2024 19:30 -- 05/19/2024 10:00
+-   FM (Egret SN: 15E101700) 11/4/2024 12:15 -- 12/10/2024 13:45
+-   PI (Flounder SN: 12L101354) 12/3/2024 15:00 -- 01/14/2025 13:45
 
 #### Faulty Batteries
 
@@ -61,18 +66,42 @@ Pellicer Creek telemetry and Egret (SN: 15E101700) data sonde experience battery
 
 In January 2024 the battery voltage on Pellicer Creek sonde, Egret, increased during the deployment which is uncommon. This same battery issue repeated itself each time this sonde was deployed in February and March. In early April when the sonde was getting calibrated the KOR software notified the technician that the datasonde's internal RTC battery aka coin cell had low voltage. Staff called Xylem/YSI tech support and was told to send the data sonde in for repairs.
 
+Flounder (SN: 12L101354) data sonde, deployed at Pine Island, experienced a battery failure for the 12/03/2024 - 01/14/2025 deployment; possibly attributed to the Conductivity/Temperature (C/T) sensor sensor pin breaking off inside the data sonde bulkhead.
+
 #### Chlorophyll Sensor Issues
 
 Several chlorophyll sensors in Q2 and Q3 deployed at all four stations calibrated with a yellow QC score. The yellow QC score means that the sensor gain or offset is near the threshold of calibration limits. The sensor may experience sensor drift. After performing a factory reset calibration and making new standard it was determined that the sensors need replacing. 
+
+#### Dissolved Oxygen Sensor Issues
+
+The dissolved oxygen sensor (SN: 16J100260), deployed on Egret (SN: 15E101700) data sonde failed at Fort Matanzas on 12/06/2024 00:45 thus resulting in rejected and missing data.
 
 ### KOR Software Issues
 
 In April, both SS and FM datasondes were freezing the KOR software each time a central wiper sensor was connected to the sondes. After speaking with Xylem/YSI tech support it was recommended to update KOR software to version 1.4.0. This software update resulted in changes to the data file structure and thus compatibility issues when uploading raw data to the CDMO website. The CDMO is currently working on a fix but until then data files are sent to Amber at the CDMO for modification and data upload.
 
-### Annual Leveling
+On October 23, 2024 we tried to revert back to KOR version 1.3.5 as requested by the CDMO. Unfortunately, the downgrade to KOR version 1.3.5 crashed the laboratory computer again and we had to upgrade KOR back to version 1.4.0. Files will continue to be sent to Amber at the CDMO for modification and data upload. 
 
-The GTM research staff completed the annual task of measuring the elevation of the datasonde in Pellicer Creek on April 15 - 16, 2024. The team measured the change in height from a reference benchmark and three positions on the piling holding the sonde. The orthometric height of the sonde tube pin position is used as the station offset when calibrating the depth sensor for the datasonde. The orthometric heights of the positions can also be used to determine if the piling holding the sonde is moving vertically.   
+### Leveling
+
+The GTM research staff completed the annual task of measuring the elevation of the datasonde in Pellicer Creek on April 15 - 16, 2024. The team measured the change in height from a reference benchmark and three positions on the piling holding the sonde. The orthometric height of the sonde tube pin position is used as the station offset when calibrating the depth sensor for the datasonde. The orthometric heights of the positions can also be used to determine if the piling holding the sonde is moving vertically.  
+
+Data sonde housing (deployment tube) and depth elevation were measured at Pine Island on December 3, 2024.
 
 ## Weather Station
 
-On September 10th the temp/rh sensor tip was changed because of heaving rust on the screen. The entire sensor will be replaced in Q4.
+On September 10, 2024 the temperature/relative humidity sensor tip was changed because of heavy rust on the screen. The entire sensor will be replaced in Q4.
+
+### Station Upgrades
+The GTMNERR MET station received an upgraded data logger and sensors in Q4. On November 13, 2024 a new CR1000x data logger was installed. This data logger replaced the CR1000. A new TX325 transmitter, BaroVue 10 barometric sensor, and battery were also installed. All existing sensors were rewired into the CR1000x and the program file that runs the station was updated to work with the new data logger, transmitter, and sensors. 
+
+### Sensor Malfunctions
+
+The temperature/relative humidity sensor malfunctioned intermittently between 08/12/2024 18:45 -- 11/13/2024 10:15. Sensor recorded very high maximum temperature readings. The elevated values were rejected during Q4 review and the data collected in between the rejected values appear to fit conditions.
+
+The MET station has also been experiencing elevated night-time PAR values. The elevated readings occur intermittently throughout the year but the frequency was greater in Q4. The cause of the elevated readings is unknown. Sometimes moisture intrusion can cause the elevated readings. The wires were chewed on by a critter so it is possible that moisture is getting inside the sensor cable. Plans are to replace the sensor in Q1 of 2025.
+
+After the CR1000x installation on November 13, 2024 the station was not recording accurate wind direction data. After reaching out to Campbell Scientific it was suggested that we move the green wire from 2H to 2L. The wire was changed and the station started recording wind direction data.The wind speed data was not affected.
+
+Lastly, the MET program that was uploaded to the station on November 13, 2024 had the incorrect switch closure for the rain gauge. The station did not record rainfall data beginning on 11/13/2024 12:30 and extending through January 28, 2025. 
+
