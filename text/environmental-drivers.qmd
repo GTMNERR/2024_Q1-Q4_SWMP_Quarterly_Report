@@ -41,7 +41,7 @@ The area was impacted by another tropical cyclone, Hurricane Helene in late Sept
 
 Typically, a Nor'easter is a storm along the East Coast of the United States with predominating winds from the northeast. These storms can last anywhere from a single day (24 hours) to several days or weeks. @callahan2022 found that these events can produce surges just as severe as tropical cyclone events, and occur much more frequently. These events are often in the news associated with blizzards in the New England area of the US; however, their impacts to northeast Florida are not insignificant. Often these storms bring higher water levels, heavy prevailing winds, precipitation, and reduced tidal exchange.
 
-Using duration of wind directions between 0-100 degrees for greater than 24-hrs, one "Nor'easter" event was identified using data from the Pellicer Creek weather station (@tbl-neer). Occasionally, localized wind directions result in values outside of this 0-100 degree window. The longest Nor'easter event occurred May 20th - May 22nd, lasting 43 hours (@fig-winds-long). This table does not identify strength of the winds during these events, just the time frames in which winds were originating and prevailing in the 0-100 degree directions (@fig-medianwspd).
+Using duration of wind directions between 0-100 degrees for greater than 24-hrs, one "Nor'easter" event was identified using data from the Pellicer Creek weather station (@tbl-neer). Occasionally, localized wind directions result in values outside of this 0-100 degree window. The longest Nor'easter event occurred October 16th - October 19th, lasting 74.5 hours (@fig-winds-long). This table does not identify strength of the winds during these events, just the time frames in which winds were originating and prevailing in the 0-100 degree directions (@fig-medianwspd).
 
 <!-- Additionally, northeast Florida felt the impacts of an unofficially named winter storm, Finn in January. Strong winds were predicted for the event as well as heavy localized rain. Saint Johns County was considered in an Enhanced Risk area (level 3 of 5) with strong southerly winds and the potential for tornadoes. Local schools were released early and government offices closed early in preparation for the fast moving storm. The Pellicer Creek weather station recorded over 23 mm of rain (@fig-rainfall-3) and had a maximum wind speed of 28.9 mph (@fig-winds-january-2). -->
 
@@ -122,7 +122,7 @@ MET %>%
 ```{r}
 #| label: fig-windspeed-direction
 #| echo: false
-#| fig-cap: "Hourly wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Monday, May 20 - Wednesday, May 22, 2024). The circles represent wind direction in degrees. All data is based upon 5 second maximum wind speed readings at the weather station."
+#| fig-cap: "Hourly wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Wednesday, October 16 - Saturday, October 19, 2024). The circles represent wind direction in degrees. All data is based upon 5 second maximum wind speed readings at the weather station."
 #| fig.subcap:
 #|    - "Hourly wind speed and direction"
 #| layout-ncol: 1
@@ -130,8 +130,8 @@ MET %>%
 fun_in <- function(x) median(x, na.rm = TRUE)
 MET %>% 
   filter(between(datetimestamp, 
-                 as.POSIXct("2024-05-20 00:00:00"), 
-                 as.POSIXct("2024-05-22 23:45:00"))) %>% 
+                 as.POSIXct("2024-10-16 00:00:00"), 
+                 as.POSIXct("2024-10-19 23:45:00"))) %>% 
     aggreswmp(by = "hours", FUN = fun_in, params = c('wspd', 'maxwspd', 'wdir')) %>% 
   #mutate(compass = cimir::cimis_degrees_to_compass(wdir)) %>%
   # filter(wspd > 2.278 & maxwspd > 4.03469) %>%
@@ -150,7 +150,7 @@ MET %>%
 ```{r}
 #| label: fig-winds-rose-long
 #| echo: false
-#| fig.cap: Daily wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Monday, May 20 - Wednesday, May 22, 2024). All data is based upon 5 second averge wind speed readings.
+#| fig.cap: Daily wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Wednesday, October 16 - Saturday, October 19, 2024). All data is based upon 5 second averge wind speed readings.
 #| 
 #| fig.subcap:
 #|    - "Daily wind speeds"
@@ -158,8 +158,8 @@ MET %>%
 
 MET_wind_long <- MET %>%
   filter(between(datetimestamp,
-                 as.POSIXct("2024-05-20 00:00:00"),
-                 as.POSIXct("2024-05-23 00:00:00")))
+                 as.POSIXct("2024-10-16 00:00:00"),
+                 as.POSIXct("2024-10-20 00:00:00")))
 
 plot_wind(MET_wind_long, type = 'weekday', main = NULL, angle = 45, annotate = TRUE, grid.line = 15, max.freq = 80)
 
@@ -168,7 +168,7 @@ plot_wind(MET_wind_long, type = 'weekday', main = NULL, angle = 45, annotate = T
 ```{r}
 #| label: fig-winds-long
 #| echo: false
-#| fig.cap: Hourly wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Monday, May 20 - Wednesday, May 22, 2024). The warmer the color, the higher the recorded wind speed. The arrows indicate the direction the wind was blowing towards and the length of the arrow reflects the wind speed information with longer meaning faster. All data is based upon 5 second readings at the weather station.
+#| fig.cap: Hourly wind speed and direction from the Pellicer Creek weather station during the timeperiod of the longest Noreaster observed at the station (Wednesday, October 16 - Saturday, October 19, 2024). The warmer the color, the higher the recorded wind speed. The arrows indicate the direction the wind was blowing towards and the length of the arrow reflects the wind speed information with longer meaning faster. All data is based upon 5 second readings at the weather station.
 #| fig.subcap:
 #|    - "Averaged hourly wind speeds"
 #|    - "Maximum wind gust recorded within each hour"
@@ -181,8 +181,8 @@ plot_wind(MET_wind_long, type = 'weekday', main = NULL, angle = 45, annotate = T
 # create new df for just wspd and direction data with conversions to SI units
 MET_wind_long <- MET %>% 
   filter(between(datetimestamp, 
-                 as.POSIXct("2024-05-20 01:00:00"), 
-                 as.POSIXct("2024-05-23 00:00:00"))) %>%
+                 as.POSIXct("2024-10-16 01:00:00"), 
+                 as.POSIXct("2024-10-20 00:00:00"))) %>%
   aggreswmp(by = "hours", params = c('wspd', 'maxwspd', 'wdir')) %>% 
   mutate(day = lubridate::date(datetimestamp),
          hour = lubridate::hour(datetimestamp),
@@ -192,7 +192,7 @@ MET_wind_long <- MET %>%
 
 
 MET_wind_long %>% 
-  filter(day > as.Date("2024-05-19")) %>% 
+  filter(day > as.Date("2024-10-16")) %>% 
   ggplot(aes(x = hour, 
              y = day, 
              fill = wspd_mph, 
@@ -212,7 +212,7 @@ MET_wind_long %>%
        fill = "Wind Speed (mph)")
 
 MET_wind_long %>% 
-  filter(day < as.Date("2024-05-23")) %>% 
+  filter(day < as.Date("2024-10-20")) %>% 
   ggplot(aes(x = hour, 
              y = day, 
              fill = maxwspd_mph, 
