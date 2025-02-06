@@ -41,13 +41,13 @@ Chlorophyll *a* values were often higher than average at all stations this year,
 
 Ammonium (NH4) concentrations for 2024 were below monthly means most of year at all four stations (@fig-nh4-boxplots). Concentrations were above average at Fort Matanzas and Pellicer Creek in September (@fig-nh4-boxplots-3; @fig-nh4-boxplots-4) and Pine Island in December (@fig-nh4-boxplots-1).
 
-Nitrite + Nitrate (NO23) concentrations for 2024 were above the monthly mean at Pine Island for most of the year (@fig-no23-boxplots-1). Concentrations were especially high in October at Pine Island and Pellicer Creek (@fig-no23-boxplots-1; @fig-no23-boxplots-4))
+Nitrite + Nitrate (NO23) concentrations for 2024 were above the monthly mean at Pine Island for most of the year (@fig-no23-boxplots-1). Concentrations were especially high in October at Pine Island and Pellicer Creek (@fig-no23-boxplots-1; @fig-no23-boxplots-4).
 
-Total Kjeldahl Nitrogen (TKN) concentrations were higher than average at all stations in January and March, but concentrations were lower most of Q2 and Q3 (@fig-tkn-boxplots). Concentrations in December were above average for Pine Island (@fig-tkn-boxplots-1) but were below average at San Sebastian, Fort Matanzas, and Pellicer Creek (@fig-tkn-boxplots-2; @fig-tkn-boxplots-3; @fig-tkn-boxplots-4))
+Total Kjeldahl Nitrogen (TKN) concentrations were higher than average at all stations in January and March, but concentrations were lower most of Q2 and Q3 (@fig-tkn-boxplots). Concentrations in December were above average for Pine Island (@fig-tkn-boxplots-1) but were below average at San Sebastian, Fort Matanzas, and Pellicer Creek (@fig-tkn-boxplots-2; @fig-tkn-boxplots-3; @fig-tkn-boxplots-4).
 
-Total phosphorus (TP) concentrations were below the state threshold at all stations in 2024, although there is missing monthly data at all of the stations (@fig-tp-boxplots). Pine Island had above average concentrations in Q4 (@fig-tp-boxplots-1) and Pellicer Creek had above average concentrations (@fig-tp-boxplots-4) in October while San Sebastian and Fort Matanzas had lower than average TP values for Q4 (@fig-tp-boxplots-2; @fig-tp-boxplots-3)).   
+Total phosphorus (TP) concentrations were below the state threshold at all stations in 2024, although there is missing monthly data at all of the stations (@fig-tp-boxplots). Pine Island had above average concentrations in Q4 (@fig-tp-boxplots-1) and Pellicer Creek had above average concentrations (@fig-tp-boxplots-4) in October while San Sebastian and Fort Matanzas had lower than average TP values for Q4 (@fig-tp-boxplots-2; @fig-tp-boxplots-3).   
 
-Above average levels of orthophosphate (PO4) were observed at Pine Island, San Sebastian, and Pellicer Creek in December (@fig-tp-boxplots-1; @fig-tp-boxplots-2; @fig-tp-boxplots-4)) and below average levels were found in Fort Matanzas (@fig-tp-boxplots-3).
+Above average levels of orthophosphate (PO4) were observed at Pine Island, San Sebastian, and Pellicer Creek in December (@fig-tp-boxplots-1; @fig-tp-boxplots-2; @fig-tp-boxplots-4) and below average levels were found in Fort Matanzas (@fig-tp-boxplots-3).
 
 ## Data
 
