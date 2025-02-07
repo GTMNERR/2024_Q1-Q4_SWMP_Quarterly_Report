@@ -27,7 +27,7 @@ The SWMP began analyzing water samples at each station for fecal coliform bacter
 
 ## Summary
 
-Elevated DOC levels were observed at all stations during the first half of the year (@fig-doc-boxplots). Pellicer Creek was the only station that had median or lower quartile results (@fig-doc-boxplots).
+Elevated DOC levels were observed at all stations during the year (@fig-doc-boxplots). Pellicer Creek had the most median or lower quartile results (@fig-doc-boxplots).
 
 Bacteria is detected in water samples from Pellicer Creek more often and in higher quantities than the other three stations (@fig-bacteria-1; @fig-bacteria-2). Fecal coliforms are also often detected at San Sebastian (@fig-bacteria-2). So far this year, bacteria samples were elevated at all stations in January and September. 
 
